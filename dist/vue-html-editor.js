@@ -145,7 +145,10 @@
 	      callbacks: {
 	        onInit: function() {
 	          me.control.summernote("code", me.model);
-	        }
+	        },
+	        onImageUpload: function (files) {
+	          me.$dispatch('sendFile', files, me.control);
+	        },
 	      }
 	    }).on("summernote.change", function() {
 	      // Note that we do not use the "onChange" options of the summernote
@@ -173,6 +176,7 @@
 	    }
 	  }
 	};
+
 
 /***/ }
 /******/ ]);

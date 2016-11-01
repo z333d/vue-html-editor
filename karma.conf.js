@@ -18,6 +18,10 @@ module.exports = function (config) {
       "./test/specs/**/*.js"
     ],
 
+    plugins: [
+      'karma-mocha'
+    ],
+
     // list of files to exclude
     exclude: [
     ],
